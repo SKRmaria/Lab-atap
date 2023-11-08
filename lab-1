@@ -1,0 +1,14 @@
+#include <stdio.h>
+#include <math.h>
+
+int main() {
+    double z1, z2, a, p;
+    p = 3.14;
+    scanf ("%lf", &a);
+    z1 = (sin(4*a)/(1+cos(4*a))*(cos(2*a)/(1+cos(2*a))));
+    printf("%lg\n", z1);
+    z2 = ctan(((3/2)*p)-a);
+    printf("%lg\n", z2);
+
+    return 0;
+}
