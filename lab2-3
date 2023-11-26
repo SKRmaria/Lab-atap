@@ -1,0 +1,17 @@
+#include <stdio.h>
+#include <math.h>
+
+int main() {
+    double x, y, r, phi;
+    printf("Введіть дійсну частину x:");
+    scanf("%lf", &x);
+    printf("Введіть уявну частину y:");
+    scanf("%lf", &y);
+    
+    r = sqrt(x*x+y*y);
+    
+    phi = atan2(y, x);
+    
+    printf("Комплексне число в тригонометричній формі: z = %.2f(cos(%.2f) + i * sin(%.2f))\n", r, phi, phi);
+    return 0;
+}
