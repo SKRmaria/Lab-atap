@@ -1,0 +1,11 @@
+#include <stdio.h>
+#include <math.h>
+
+int main() {
+    double m, y, v;
+    m = 634;
+    y = m*2025.3718;
+    v = y/0.04861;
+    printf("%lg\n", v);
+    return 0;
+}
