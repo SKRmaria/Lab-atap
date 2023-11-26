@@ -1,0 +1,33 @@
+#include <stdio.h>
+#include <math.h>
+
+int main()
+{
+    
+    double x;
+    
+    printf("Введіть оцінку\n", x);
+    scanf("%lf", &x);
+    
+    if(x>=5 && x<=6){
+        printf("У Вас початковий рівень знань\n");
+    } 
+
+    else if(x>=7 && x<=8){
+        printf("У Вас середній рівень знань\n");
+    }
+
+    else if(x>=9 && x<=10){
+        printf("У Вас достатній рівень знань\n");
+    }
+    
+    else if(x>=11 && x<=12){
+        printf("У Вас високий рівень знань\n");
+    }
+    else if(x<5){
+        printf("У Вас низький рівень знань\n");
+    } else if(x>12){
+        printf ("Введіть інше число\n");
+    }
+    return 0;
+}
