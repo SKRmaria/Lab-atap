@@ -1,0 +1,39 @@
+#include <stdio.h>
+
+int sumOfSevens(int n, int a[n][n]) {
+    int sum = 0;
+
+    for (int i = 0; i < n; i++) {
+        for (int j = 0; j < n; j++) {
+            if (i == j) {
+                int digit = a[i][j] % 10;
+
+                if (digit == 7) {
+                    sum += a[i][j];
+                }
+            }
+        }
+    }
+
+    return sum;
+}
+
+int main() {
+    int n;
+    printf("Введіть розмір квадратного масиву: ");
+    scanf("%d", &n);
+
+    int a[n][n];
+    printf("Введіть елементи масиву:\n");
+
+    for (int i = 0; i < n; i++) {
+        for (int j = 0; j < n; j++) {
+            scanf("%d", &a[i][j]);
+        }
+    }
+
+    int sum = sumOfSevens(n, a);
+    printf("Сума елементів головної діагоналі, які закінчуються на цифру 7: %d\n", sum);
+
+    return 0;
+}
