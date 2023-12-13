@@ -1,0 +1,30 @@
+#include <stdio.h>
+
+// Function to calculate ΣP1n e^(ikθ)
+double calculate_sum(int n, double k, double theta) {
+    double sum = 0;
+    for (int i = 1; i <= n; i++) {
+        sum += i * k * theta;
+    }
+    return sum;
+}
+
+int main() {
+    int n;
+    double k, theta;
+
+    printf("Enter the value of n: ");
+    scanf("%d", &n);
+
+    printf("Enter the value of k: ");
+    scanf("%lf", &k);
+
+    printf("Enter the value of theta: ");
+    scanf("%lf", &theta);
+
+    double result = calculate_sum(n, k, theta);
+
+    printf("The result is: %.6lf\n", result);
+
+    return 0;
+}
