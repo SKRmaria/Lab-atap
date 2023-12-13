@@ -1,0 +1,31 @@
+#include <stdio.h>
+#include <math.h>
+
+void print_digit(int n, int pos) {
+    int num = n / (int)pow(10, pos - 1);
+    printf("%d ", num);
+}
+
+int main() {
+    int a, b, c, d;
+    int number = 0;
+
+    printf("Input 4 digits: ");
+    scanf("%d %d %d %d", &a, &b, &c, &d);
+
+    number = a * 1000 + b * 100 + c * 10 + d;
+    printf("The 4 digits are: ");
+    print_digit(number, 4);
+    print_digit(number, 3);
+    print_digit(number, 2);
+    print_digit(number, 1);
+
+    int squared_number = number * number;
+    printf("\nThe 4 digits squared are: ");
+    print_digit(squared_number, 4);
+    print_digit(squared_number, 3);
+    print_digit(squared_number, 2);
+    print_digit(squared_number, 1);
+
+    return 0;
+}
