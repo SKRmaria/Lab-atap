@@ -1,0 +1,57 @@
+#include <stdio.h>
+#include <string.h>
+
+char * getWord(int number) {
+    switch (number) {
+        case 1: return "один";
+        case 2: return "два";
+        case 3: return "три";
+        case 4: return "чотири";
+        case 5: return "п'ять";
+        case 6: return "шість";
+        case 7: return "сім";
+        case 8: return "вісім";
+        case 9: return "дев'ять";
+        case 0: return "нуль";
+        default: return "";
+    }
+}
+
+int main() {
+    char input[100];
+    char output[1000];
+    char operation;
+    int a, b;
+
+    printf("Введіть математичний : ");
+    fgets(input, sizeof(input), stdin);
+
+    sscanf(input, "%d %c %d", &a, &operation, &b);
+
+    switch (operation) {
+        case '+': 
+            strcpy(output, getWord(a));
+            strcat(output, " плюс ");
+            strcat(output, getWord(b));
+            break;
+        case '-': 
+            strcpy(output, getWord(a));
+            strcat(output, " мінус ");
+            strcat(output, getWord(b));
+            break;
+        case '*': 
+            strcpy(output, getWord(a));
+            strcat(output, " помножений на ");
+            strcat(output, getWord(b));
+            break;
+        case '/': 
+            strcpy(output, getWord(a));
+            strcat(output, " поділений на ");
+            strcat(output, getWord(b));
+            break;
+    }
+
+    printf("%s\n", output);
+
+    return 0;
+}
