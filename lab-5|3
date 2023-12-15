@@ -1,24 +1,34 @@
 #include <stdio.h>
-	
-int main() {
-    const int size = 100;
-    int numbers[size];
+#include <stdlib.h>
+#include <time.h>
 
-    printf("Введіть 100 цілих чисел:\n");
-    for (int i = 0; i < size; ++i) {
-        printf("Число %d: ", i + 1);
-        scanf("%d", &numbers[i]);
+int main() {
+
+    srand(time(NULL));
+
+    
+    int numbers[100];
+
+    for (int i = 0; i < 100; ++i) {
+        numbers[i] = rand() % 201 - 100;  
     }
 
-    printf("Від'ємні числа:\n");
-    for (int i = 0; i < size; ++i) {
+    
+    printf("Випадкові числа:\n");
+    for (int i = 0; i < 100; ++i) {
+        printf("%d ", numbers[i]);
+    }
+
+    printf("\n\nВід'ємні числа:\n");
+    for (int i = 0; i < 100; ++i) {
         if (numbers[i] < 0) {
             printf("%d ", numbers[i]);
         }
     }
 
+
     printf("\nІнші числа:\n");
-    for (int i = 0; i < size; ++i) {
+    for (int i = 0; i < 100; ++i) {
         if (numbers[i] >= 0) {
             printf("%d ", numbers[i]);
         }
