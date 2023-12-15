@@ -1,0 +1,34 @@
+#include <stdio.h>
+
+int main() {
+    int n;
+
+  
+    printf("Введіть кількість елементів масиву: ");
+    scanf("%d", &n);
+
+    double arr[n];
+
+    printf("Введіть елементи масиву:\n");
+    for (int i = 0; i < n; ++i) {
+        printf("A%d: ", i + 1);
+        scanf("%lf", &arr[i]);
+    }
+
+    double minA2 = arr[1];
+    double maxA1 = arr[0];
+
+    for (int i = 3; i < n; i += 2) {
+        if (arr[i - 1] < minA2) {
+            minA2 = arr[i - 1];
+        }
+
+        if (arr[i - 2] > maxA1) {
+            maxA1 = arr[i - 2];
+        }
+    }
+
+
+
+    return 0;
+}
