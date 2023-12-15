@@ -1,0 +1,27 @@
+#include <stdio.h>
+	
+int main() {
+    const int size = 100;
+    int numbers[size];
+
+    // Введення 100 цілих чисел
+    printf("Введіть 100 цілих чисел:\n");
+    for (int i = 0; i < size; ++i) {
+        printf("Число %d: ", i + 1);
+        scanf("%d", &numbers[i]);
+    }
+
+    // Виведення від'ємних чисел
+    printf("Від'ємні числа:\n");
+    for (int i = 0; i < size; ++i) {
+        if (numbers[i] < 0) {
+            printf("%d ", numbers[i]);
+        }
+    }
+
+    // Виведення інших чисел
+    printf("\nІнші числа:\n");
+    for (int i = 0; i < size; ++i) {
+        if (numbers[i] >= 0) {
+            printf("%d ", numbers[i]);
+        }
