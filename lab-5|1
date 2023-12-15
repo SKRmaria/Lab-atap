@@ -3,7 +3,6 @@
 int main() {
     int n;
 
-  
     printf("Введіть кількість елементів масиву: ");
     scanf("%d", &n);
 
@@ -28,7 +27,7 @@ int main() {
         }
     }
 
-
+    printf("min(A2, A4, ...) + max(A1, A3, ...) = %.2lf\n", minA2 + maxA1);
 
     return 0;
 }
