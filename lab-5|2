@@ -1,0 +1,42 @@
+#include <stdio.h>
+#include <math.h>
+
+#define MAX_N 100
+
+int find_nearest_integer(double arr[], int n) {
+    int result = arr[0];
+    double min_diff = fabs(arr[0] - round(arr[0]));
+
+    for (int i = 1; i < n; i++) {
+        double diff = fabs(arr[i] - round(arr[i]));
+        if (diff < min_diff) {
+            min_diff = diff;
+            result = arr[i];
+        }
+    }
+
+    return result;
+}
+
+int main() {
+    int n;
+    printf("Enter the number of elements: ");
+    scanf("%d", &n);
+
+    if (n > MAX_N) {
+        printf("The number of elements should not exceed %d.\n", MAX_N);
+        return 1;
+    }
+
+    double x[MAX_N];
+
+    for (int i = 0; i < n; i++) {
+        printf("Enter element %d: ", i + 1);
+        scanf("%lf", &x[i]);
+    }
+
+    int nearest_integer = find_nearest_integer(x, n);
+    printf("Nearest nearest integer is: %d\n", nearest_integer);
+
+    return 0;
+}
